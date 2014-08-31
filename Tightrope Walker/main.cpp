@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int len;
-    while(scanf("%d", &len) != EOF) // leer hasta fin de archivo
+    while(scanf("%d", &len)) // leer hasta fin de archivo
     {
         string inst; cin >> inst; // cadena que contiene las instrucciones
         float current, threshold, cnt = 0; // asumo que el tipo comienza con un angulo de 0 grados
