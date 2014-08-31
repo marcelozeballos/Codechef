@@ -10,7 +10,7 @@ int main()
     while(scanf("%d", &len) != EOF) // leer hasta fin de archivo
     {
         string inst; cin >> inst; // cadena que contiene las instrucciones
-        float current, threshold, cnt = 0;
+        float current, threshold, cnt = 0; // asumo que el tipo comienza con un angulo de 0 grados
         bool caida = false; // bool que controla si el tipo se cayo o no. comienza en falso para indicar que no hay caida
         scanf("%f %f", &current, &threshold);
 
@@ -20,7 +20,7 @@ int main()
                 cnt -= current;
             if(inst[i] == 'R') // si es r el angulo sube
                 cnt += current;
-            if(abs(cnt) >= threshold)// si current (rl angulo de ahora) fuera igual o mayor a threshold (el limite) el
+            if(abs(cnt) >= threshold)// si el valor absoluto de cnt (rl angulo de ahora) fuera igual o mayor a threshold (el limite) el
             {
                 caida = true; //tipo se cae y el for se rompe
                 break;
