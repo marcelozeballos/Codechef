@@ -7,12 +7,12 @@ using namespace std;
 int main()
 {
     int len;
-    while(scanf("%d", &len)) // leer hasta fin de archivo
+    while(cin >> len) // leer hasta fin de archivo
     {
         string inst; cin >> inst; // cadena que contiene las instrucciones
         float current, threshold, cnt = 0; // asumo que el tipo comienza con un angulo de 0 grados
         bool caida = false; // bool que controla si el tipo se cayo o no. comienza en falso para indicar que no hay caida
-        scanf("%f %f", &current, &threshold);
+        cin >> current >> threshold;
 
         for(int i = 0; i < len; i++) // este for recorre uno a uno los caracteres de la cadena
         {
@@ -27,9 +27,9 @@ int main()
             }
         }
         if(!caida)
-            printf("YES\n");
+            cout << "YES" << endl;
         else
-            printf("NO\n");
+            cout << "NO" << endl;
     }
 
     return 0;
